@@ -51,6 +51,12 @@
     <Compile Include="Classes\Guest.cs" />
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Forms\Beauty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Beauty.Designer.cs">
+      <DependentUpon>Beauty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,19 +65,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Beauty.resx">
+      <DependentUpon>Beauty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -81,6 +94,32 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1617314616_46-p-salon-krasoti-fon-47 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-9p9rCO1YMWaBQ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-WCU38VeD4HEeuy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-EmZbHLMlpMnu2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-Er2faa4OEJAIyog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-FaWRMP50KrDTY.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-4TzPFF4J4yoy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-NQX5EElKG9Iy1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-3DK1VH6GcpC.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
