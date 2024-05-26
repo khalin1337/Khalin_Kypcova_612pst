@@ -11,7 +11,7 @@ namespace Khalin_Kypcova_612pst.Classes
         public int Id { get; set; }
         public User user { get; set; }
         public Type type { get; set; }
-        public DateTime Date { get; set; }
+        public DateTimeOffset Date { get; set; }
 
     }
     public enum Type

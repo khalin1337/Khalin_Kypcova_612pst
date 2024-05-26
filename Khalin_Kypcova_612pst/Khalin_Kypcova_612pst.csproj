@@ -47,14 +47,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Admin.cs" />
+    <Compile Include="Classes\DataBank.cs" />
     <Compile Include="Classes\Guest.cs" />
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\User.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace Khalin_Kypcova_612pst
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Обязательная переменная конструктора.

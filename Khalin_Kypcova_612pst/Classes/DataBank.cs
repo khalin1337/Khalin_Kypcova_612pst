@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Khalin_Kypcova_612pst.Classes
 {
-    internal class Serializacion
+    static class DataBank
     {
+        public static User User;
     }
 }
