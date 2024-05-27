@@ -8,10 +8,18 @@ namespace Khalin_Kypcova_612pst.Classes
 {
     public class Order
     {
-        public int Id { get; set; }
-        public User user { get; set; }
+        public static int Id { get; set; } = 0;
+        public IUser user { get; set; }
         public Type type { get; set; }
-        public DateTimeOffset Date { get; set; }
+        public DateTime Date { get; set; }
+        public Order() { }
+        public Order( IUser _user, Type _type, DateTime _date) 
+        {
+            Id++;
+            user = _user;
+            type = _type;
+            Date = _date;
+        }
 
     }
     public enum Type

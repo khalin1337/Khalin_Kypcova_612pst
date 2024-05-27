@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.Menu_Strip_Guest = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Strip_Admin = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Picture_Ukladka = new System.Windows.Forms.PictureBox();
             this.Picture_Strizhka = new System.Windows.Forms.PictureBox();
             this.Picture_Nigti = new System.Windows.Forms.PictureBox();
@@ -65,7 +64,6 @@
             // 
             this.Menu_Strip_Guest.BackColor = System.Drawing.Color.Gray;
             this.Menu_Strip_Guest.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3});
             this.Menu_Strip_Guest.Location = new System.Drawing.Point(0, 0);
@@ -76,16 +74,6 @@
             this.Menu_Strip_Guest.Text = "menuStrip1";
             this.Menu_Strip_Guest.Visible = false;
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Gray;
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(55, 24);
-            this.toolStripMenuItem1.Text = "Home";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.BackColor = System.Drawing.Color.Gray;
@@ -94,7 +82,6 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(57, 24);
             this.toolStripMenuItem2.Text = "Profile";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -104,15 +91,14 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(83, 24);
             this.toolStripMenuItem3.Text = "My Orders";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // Menu_Strip_Admin
             // 
             this.Menu_Strip_Admin.BackColor = System.Drawing.Color.Gray;
             this.Menu_Strip_Admin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4,
             this.toolStripMenuItem5,
-            this.toolStripMenuItem6});
+            this.toolStripMenuItem6,
+            this.toolStripMenuItem1});
             this.Menu_Strip_Admin.Location = new System.Drawing.Point(0, 0);
             this.Menu_Strip_Admin.Name = "Menu_Strip_Admin";
             this.Menu_Strip_Admin.Padding = new System.Windows.Forms.Padding(0);
@@ -120,15 +106,6 @@
             this.Menu_Strip_Admin.TabIndex = 1;
             this.Menu_Strip_Admin.Text = "menuStrip1";
             this.Menu_Strip_Admin.Visible = false;
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.BackColor = System.Drawing.Color.Gray;
-            this.toolStripMenuItem4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripMenuItem4.ForeColor = System.Drawing.Color.FloralWhite;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(55, 24);
-            this.toolStripMenuItem4.Text = "Home";
             // 
             // toolStripMenuItem5
             // 
@@ -147,6 +124,15 @@
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(61, 24);
             this.toolStripMenuItem6.Text = "Orders";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Gray;
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.FloralWhite;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(92, 24);
+            this.toolStripMenuItem1.Text = "Admin Panel";
             // 
             // Picture_Ukladka
             // 
@@ -354,6 +340,7 @@
             this.Name = "Beauty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Beauty";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Beauty_FormClosing);
             this.Menu_Strip_Guest.ResumeLayout(false);
             this.Menu_Strip_Guest.PerformLayout();
             this.Menu_Strip_Admin.ResumeLayout(false);
@@ -373,11 +360,9 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip Menu_Strip_Guest;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.MenuStrip Menu_Strip_Admin;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
         private System.Windows.Forms.PictureBox Picture_Ukladka;
@@ -394,5 +379,6 @@
         private System.Windows.Forms.Label label_Vii;
         private System.Windows.Forms.Label label_Brovi;
         private System.Windows.Forms.Label label_Kosmetolog;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

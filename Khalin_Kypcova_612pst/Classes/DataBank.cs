@@ -8,6 +8,8 @@ namespace Khalin_Kypcova_612pst.Classes
 {
     static class DataBank
     {
-        public static User User;
+        public static IUser CurentUser;
+        public static string TextInfo;
+        public static Type TypeInfo;
     }
 }

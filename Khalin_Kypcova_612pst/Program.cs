@@ -15,7 +15,7 @@ namespace Khalin_Kypcova_612pst
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Beauty());
+            Application.Run(new Login());
         }
     }
 }

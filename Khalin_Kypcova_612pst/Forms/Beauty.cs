@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Khalin_Kypcova_612pst.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,59 +13,71 @@ namespace Khalin_Kypcova_612pst.Forms
 {
     public partial class Beauty : Form
     {
+        string[] Info;
+        List<IUser> Users = new List<IUser>();
+        List<Order> Orders = new List<Order>();
         public Beauty()
         {
             InitializeComponent();
+            Serializacion.DeserializationFromJson<string[]>(ref Info,"Type.json");
+            if (DataBank.CurentUser is Admin) Menu_Strip_Admin.Visible = true;
+            else Menu_Strip_Guest.Visible = true;
+            
         }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Picture_Strizhka_Click(object sender, EventArgs e)
         {
-
+            DataBank.TextInfo = Info[1];
+            DataBank.TypeInfo = (Classes.Type)1;
+            Zapis zapis = new Zapis();
+            zapis.ShowDialog();
         }
 
         private void Picture_Ukladka_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DataBank.TextInfo = Info[0];
+            DataBank.TypeInfo = (Classes.Type)0;
+            Zapis zapis = new Zapis();
+            zapis.ShowDialog();
         }
 
         private void Picture_Brovi_Click(object sender, EventArgs e)
         {
-
+            DataBank.TextInfo = Info[5];
+            DataBank.TypeInfo = (Classes.Type)5;
+            Zapis zapis = new Zapis();
+            zapis.ShowDialog();
         }
 
         private void Picture_Nigti_Click(object sender, EventArgs e)
         {
-
+            DataBank.TextInfo = Info[2];
+            DataBank.TypeInfo = (Classes.Type)2;
+            Zapis zapis = new Zapis();
+            zapis.ShowDialog();
         }
 
         private void Picture_Farbuvanya_Click(object sender, EventArgs e)
         {
-
+            DataBank.TextInfo = Info[3];
+            DataBank.TypeInfo = (Classes.Type)3;
+            Zapis zapis = new Zapis();
+            zapis.ShowDialog();
         }
 
         private void Picture_Vii_Click(object sender, EventArgs e)
         {
-
+            DataBank.TextInfo = Info[4];
+            DataBank.TypeInfo = (Classes.Type)4;
+            Zapis zapis = new Zapis();
+            zapis.ShowDialog();
         }
 
         private void Picture_Kosmet_Click(object sender, EventArgs e)
         {
-
+            DataBank.TextInfo = Info[6];
+            DataBank.TypeInfo = (Classes.Type)6;
+            Zapis zapis = new Zapis();
+            zapis.ShowDialog();
         }
 
         private void Picture_Ukladka_MouseMove(object sender, MouseEventArgs e)
@@ -135,6 +148,11 @@ namespace Khalin_Kypcova_612pst.Forms
         private void Picture_Kosmet_MouseLeave(object sender, EventArgs e)
         {
             label_Kosmetolog.Visible = false;
+        }
+
+        private void Beauty_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
