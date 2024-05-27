@@ -29,6 +29,7 @@ namespace Khalin_Kypcova_612pst.Classes
                 Zapis_button.Visible = true;
             }
             else Change_button.Visible = true;
+            Date_Pick.MinDate = DateTime.Now;
             Serializacion.DeserializationFromJson(ref Info, "Type.json");
             Serializacion.DeserializationFromJson(ref orders, "Orders.json");
         }
@@ -41,9 +42,9 @@ namespace Khalin_Kypcova_612pst.Classes
 
                 DateTime Datetime_ = new DateTime(Date_Pick.Value.Year, Date_Pick.Value.Month, Date_Pick.Value.Day, Int32.Parse(Time_Pick.Text.ToString().Substring(0, 2)), 00, 00);
                 // if (!orders.Exists(order => order.Date == Datetime_))
-                if (orders.Any(order => order.Date == Datetime_ && order.type == DataBank.TypeInfo))
+                if (!orders.Any(order => order.Date == Datetime_ && order.type == DataBank.TypeInfo))
                 {
-                    orders.Add(new Order(DataBank.CurentUser, DataBank.TypeInfo, Datetime_));
+                    orders.Add(new Order(orders.Last().Id+1,DataBank.CurentUser, DataBank.TypeInfo, Datetime_));
                     this.Close();
                 }
                 else MessageBox.Show("На цей час вже е запис");

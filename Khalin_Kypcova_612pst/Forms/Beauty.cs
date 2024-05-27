@@ -14,14 +14,13 @@ namespace Khalin_Kypcova_612pst.Forms
     public partial class Beauty : Form
     {
         string[] Info;
-        List<IUser> Users = new List<IUser>();
-        List<Order> Orders = new List<Order>();
         public Beauty()
         {
             InitializeComponent();
             Serializacion.DeserializationFromJson<string[]>(ref Info,"Type.json");
             if (DataBank.CurentUser is Admin) Menu_Strip_Admin.Visible = true;
             else Menu_Strip_Guest.Visible = true;
+            
             
         }
         private void Picture_Strizhka_Click(object sender, EventArgs e)
@@ -153,6 +152,30 @@ namespace Khalin_Kypcova_612pst.Forms
         private void Beauty_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Orders orders = new Orders();
+            orders.ShowDialog();
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Orders orders = new Orders();
+            orders.ShowDialog();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile();
+            profile.ShowDialog();
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile();
+            profile.ShowDialog();
         }
     }
 }

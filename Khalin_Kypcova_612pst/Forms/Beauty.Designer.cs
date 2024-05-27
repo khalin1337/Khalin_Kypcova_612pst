@@ -34,7 +34,6 @@
             this.Menu_Strip_Admin = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Picture_Ukladka = new System.Windows.Forms.PictureBox();
             this.Picture_Strizhka = new System.Windows.Forms.PictureBox();
             this.Picture_Nigti = new System.Windows.Forms.PictureBox();
@@ -82,6 +81,7 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(57, 24);
             this.toolStripMenuItem2.Text = "Profile";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -91,14 +91,14 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(83, 24);
             this.toolStripMenuItem3.Text = "My Orders";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // Menu_Strip_Admin
             // 
             this.Menu_Strip_Admin.BackColor = System.Drawing.Color.Gray;
             this.Menu_Strip_Admin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem6});
             this.Menu_Strip_Admin.Location = new System.Drawing.Point(0, 0);
             this.Menu_Strip_Admin.Name = "Menu_Strip_Admin";
             this.Menu_Strip_Admin.Padding = new System.Windows.Forms.Padding(0);
@@ -115,6 +115,7 @@
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(57, 24);
             this.toolStripMenuItem5.Text = "Profile";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem6
             // 
@@ -124,15 +125,7 @@
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(61, 24);
             this.toolStripMenuItem6.Text = "Orders";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Gray;
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(92, 24);
-            this.toolStripMenuItem1.Text = "Admin Panel";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // Picture_Ukladka
             // 
@@ -379,6 +372,5 @@
         private System.Windows.Forms.Label label_Vii;
         private System.Windows.Forms.Label label_Brovi;
         private System.Windows.Forms.Label label_Kosmetolog;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

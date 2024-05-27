@@ -73,11 +73,12 @@
             this.Date_Pick.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Date_Pick.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.Date_Pick.Location = new System.Drawing.Point(100, 375);
-            this.Date_Pick.MinDate = new System.DateTime(2024, 5, 27, 0, 0, 0, 0);
+            this.Date_Pick.MinDate = new System.DateTime(2024, 5, 27, 21, 16, 17, 0);
             this.Date_Pick.Name = "Date_Pick";
             this.Date_Pick.Size = new System.Drawing.Size(150, 22);
             this.Date_Pick.TabIndex = 2;
             this.Date_Pick.TabStop = false;
+            this.Date_Pick.Value = new System.DateTime(2024, 5, 27, 21, 16, 17, 0);
             this.Date_Pick.Visible = false;
             // 
             // Time_Pick

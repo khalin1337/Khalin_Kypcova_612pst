@@ -8,14 +8,14 @@ namespace Khalin_Kypcova_612pst.Classes
 {
     public class Order
     {
-        public static int Id { get; set; } = 0;
+        public  int Id { get; set; } = 0;
         public IUser user { get; set; }
         public Type type { get; set; }
         public DateTime Date { get; set; }
         public Order() { }
-        public Order( IUser _user, Type _type, DateTime _date) 
+        public Order(int _id, IUser _user, Type _type, DateTime _date) 
         {
-            Id++;
+            Id = _id;
             user = _user;
             type = _type;
             Date = _date;
