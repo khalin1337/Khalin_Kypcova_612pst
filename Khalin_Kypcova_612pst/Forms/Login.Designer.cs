@@ -33,6 +33,7 @@
             this.Log_in_email = new System.Windows.Forms.TextBox();
             this.Log_In_pasword = new System.Windows.Forms.TextBox();
             this.Log_in_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LoginLabel
@@ -57,6 +58,7 @@
             this.Log_in_email.TabStop = false;
             this.Log_in_email.Text = "Email";
             this.Log_in_email.Enter += new System.EventHandler(this.Log_in_email_Enter);
+            this.Log_in_email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Log_in_email_KeyDown);
             this.Log_in_email.Leave += new System.EventHandler(this.Log_in_email_Leave);
             // 
             // Log_In_pasword
@@ -69,6 +71,7 @@
             this.Log_In_pasword.TabStop = false;
             this.Log_In_pasword.Text = "Password";
             this.Log_In_pasword.Enter += new System.EventHandler(this.Log_In_pasword_Enter);
+            this.Log_In_pasword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Log_In_pasword_KeyDown);
             this.Log_In_pasword.Leave += new System.EventHandler(this.Log_In_pasword_Leave);
             // 
             // Log_in_button
@@ -78,9 +81,24 @@
             this.Log_in_button.Name = "Log_in_button";
             this.Log_in_button.Size = new System.Drawing.Size(96, 40);
             this.Log_in_button.TabIndex = 3;
+            this.Log_in_button.TabStop = false;
             this.Log_in_button.Text = "Log in";
             this.Log_in_button.UseVisualStyleBackColor = true;
             this.Log_in_button.Click += new System.EventHandler(this.Log_in_button_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(142, 323);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Sign Up";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Login
             // 
@@ -88,6 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(384, 361);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Log_in_button);
             this.Controls.Add(this.Log_In_pasword);
             this.Controls.Add(this.Log_in_email);
@@ -109,6 +128,7 @@
         private System.Windows.Forms.TextBox Log_in_email;
         private System.Windows.Forms.TextBox Log_In_pasword;
         private System.Windows.Forms.Button Log_in_button;
+        private System.Windows.Forms.Label label1;
     }
 }
 

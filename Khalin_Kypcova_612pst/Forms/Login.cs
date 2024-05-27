@@ -76,5 +76,30 @@ namespace Khalin_Kypcova_612pst
             Log_In_pasword.UseSystemPasswordChar = true;
             if (Log_In_pasword.Text == "Password") Log_In_pasword.Text = string.Empty;
         }
+
+        private void Log_in_email_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                Log_In_pasword.Focus();
+            }
+        }
+
+        private void Log_In_pasword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                Log_in_button_Click(Log_in_button,null);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SignUp signUp = new SignUp();
+            signUp.Show();
+        }
     }
 }

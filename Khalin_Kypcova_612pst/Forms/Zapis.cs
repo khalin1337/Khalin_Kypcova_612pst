@@ -30,6 +30,7 @@ namespace Khalin_Kypcova_612pst.Classes
             }
             else Change_button.Visible = true;
             Serializacion.DeserializationFromJson(ref Info, "Type.json");
+            Serializacion.DeserializationFromJson(ref orders, "Orders.json");
         }
 
         private void zapis_button_Click(object sender, EventArgs e)
@@ -37,8 +38,15 @@ namespace Khalin_Kypcova_612pst.Classes
                 MessageBox.Show("Оберіть час запису");
             else
             {
-                DateTime Datetime_ = new DateTime(Date_Pick.Value.Year, Date_Pick.Value.Month, Date_Pick.Value.Day, Int32.Parse(Time_Pick.SelectedValue.ToString().Substring(0, 2)), 00, 00);
-                //orders.Add(new Order(DataBank.CurentUser,DataBank.TypeInfo, Datetime_));
+
+                DateTime Datetime_ = new DateTime(Date_Pick.Value.Year, Date_Pick.Value.Month, Date_Pick.Value.Day, Int32.Parse(Time_Pick.Text.ToString().Substring(0, 2)), 00, 00);
+                // if (!orders.Exists(order => order.Date == Datetime_))
+                if (orders.Any(order => order.Date == Datetime_ && order.type == DataBank.TypeInfo))
+                {
+                    orders.Add(new Order(DataBank.CurentUser, DataBank.TypeInfo, Datetime_));
+                    this.Close();
+                }
+                else MessageBox.Show("На цей час вже е запис");
             }
         }
 
@@ -56,6 +64,7 @@ namespace Khalin_Kypcova_612pst.Classes
         private void Zapis_FormClosing(object sender, FormClosingEventArgs e)
         {
             Serializacion.SerialiazeToJson(ref Info, "Type.json");
+            Serializacion.SerialiazeToJson(ref orders, "Orders.json");
         }
     }
 }
