@@ -32,6 +32,7 @@
             this.Datetime_orders = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.OrdersTime_button = new System.Windows.Forms.Button();
+            this.Dellete_Order_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_orders)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(287, 15);
+            this.label1.Location = new System.Drawing.Point(191, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 25);
             this.label1.TabIndex = 2;
@@ -72,14 +73,26 @@
             // OrdersTime_button
             // 
             this.OrdersTime_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrdersTime_button.Location = new System.Drawing.Point(12, 15);
+            this.OrdersTime_button.Location = new System.Drawing.Point(317, 15);
             this.OrdersTime_button.Name = "OrdersTime_button";
-            this.OrdersTime_button.Size = new System.Drawing.Size(153, 30);
+            this.OrdersTime_button.Size = new System.Drawing.Size(100, 30);
             this.OrdersTime_button.TabIndex = 3;
             this.OrdersTime_button.TabStop = false;
             this.OrdersTime_button.Text = "Поточні";
             this.OrdersTime_button.UseVisualStyleBackColor = true;
             this.OrdersTime_button.Click += new System.EventHandler(this.OrdersTime_button_Click);
+            // 
+            // Dellete_Order_button
+            // 
+            this.Dellete_Order_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Dellete_Order_button.Location = new System.Drawing.Point(12, 15);
+            this.Dellete_Order_button.Name = "Dellete_Order_button";
+            this.Dellete_Order_button.Size = new System.Drawing.Size(120, 30);
+            this.Dellete_Order_button.TabIndex = 4;
+            this.Dellete_Order_button.TabStop = false;
+            this.Dellete_Order_button.Text = "Видалити";
+            this.Dellete_Order_button.UseVisualStyleBackColor = true;
+            this.Dellete_Order_button.Click += new System.EventHandler(this.Dellete_Order_button_Click);
             // 
             // Orders
             // 
@@ -87,6 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.Dellete_Order_button);
             this.Controls.Add(this.OrdersTime_button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Datetime_orders);
@@ -108,5 +122,6 @@
         private System.Windows.Forms.DateTimePicker Datetime_orders;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button OrdersTime_button;
+        private System.Windows.Forms.Button Dellete_Order_button;
     }
 }

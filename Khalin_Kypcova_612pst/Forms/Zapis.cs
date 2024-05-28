@@ -42,9 +42,10 @@ namespace Khalin_Kypcova_612pst.Classes
 
                 DateTime Datetime_ = new DateTime(Date_Pick.Value.Year, Date_Pick.Value.Month, Date_Pick.Value.Day, Int32.Parse(Time_Pick.Text.ToString().Substring(0, 2)), 00, 00);
                 // if (!orders.Exists(order => order.Date == Datetime_))
-                if (!orders.Any(order => order.Date == Datetime_ && order.type == DataBank.TypeInfo))
+                if (!(orders.Any(order => order.Date == Datetime_ && order.type == DataBank.TypeInfo)))
                 {
                     orders.Add(new Order(orders.Last().Id+1,DataBank.CurentUser, DataBank.TypeInfo, Datetime_));
+                    Serializacion.SerialiazeToJson(ref orders, "Orders.json");
                     this.Close();
                 }
                 else MessageBox.Show("На цей час вже е запис");
@@ -60,12 +61,13 @@ namespace Khalin_Kypcova_612pst.Classes
             else Text_info.ReadOnly = false;
             Text_info.SelectAll();
             Info[(int)DataBank.TypeInfo] = Text_info.Text.ToString();
+            Serializacion.SerialiazeToJson(ref Info, "Type.json");
         }
 
         private void Zapis_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Serializacion.SerialiazeToJson(ref Info, "Type.json");
-            Serializacion.SerialiazeToJson(ref orders, "Orders.json");
+            //Serializacion.SerialiazeToJson(ref Info, "Type.json");
+            //Serializacion.SerialiazeToJson(ref orders, "Orders.json");
         }
     }
 }
