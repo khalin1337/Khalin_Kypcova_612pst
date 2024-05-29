@@ -18,8 +18,9 @@ namespace Khalin_Kypcova_612pst.Classes
         public Zapis()
         {
             InitializeComponent();
+            Serializacion.DeserializationFromJson(ref Info, "Type.json");
             Type_Name.Text = DataBank.TypeInfo.ToString();
-            Text_info.Text = DataBank.TextInfo;
+            Text_info.Text = Info[(int)DataBank.TypeInfo];
             if (DataBank.CurentUser is Guest) 
             {
                 Date_Pick.Visible = true;
@@ -30,7 +31,6 @@ namespace Khalin_Kypcova_612pst.Classes
             }
             else Change_button.Visible = true;
             Date_Pick.MinDate = DateTime.Now;
-            Serializacion.DeserializationFromJson(ref Info, "Type.json");
             Serializacion.DeserializationFromJson(ref orders, "Orders.json");
         }
 
@@ -46,6 +46,7 @@ namespace Khalin_Kypcova_612pst.Classes
                 {
                     orders.Add(new Order(orders.Last().Id+1,DataBank.CurentUser, DataBank.TypeInfo, Datetime_));
                     Serializacion.SerialiazeToJson(ref orders, "Orders.json");
+                    MessageBox.Show("Ви записалися");
                     this.Close();
                 }
                 else MessageBox.Show("На цей час вже е запис");
@@ -66,7 +67,7 @@ namespace Khalin_Kypcova_612pst.Classes
 
         private void Zapis_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Serializacion.SerialiazeToJson(ref Info, "Type.json");
+            Serializacion.SerialiazeToJson(ref Info, "Type.json");
             //Serializacion.SerialiazeToJson(ref orders, "Orders.json");
         }
     }

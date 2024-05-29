@@ -37,6 +37,13 @@ namespace Khalin_Kypcova_612pst
                     beauty.Show();
                     this.Hide();
                 }
+                else
+                {
+                    MessageBox.Show("Невірний пароль");
+                    Log_In_pasword.Text = "Password";
+                    Log_In_pasword.UseSystemPasswordChar = false;
+                    Log_in_email.Text = "Email";
+                }
 
             }
             else

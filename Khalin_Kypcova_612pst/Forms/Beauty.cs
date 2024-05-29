@@ -25,7 +25,6 @@ namespace Khalin_Kypcova_612pst.Forms
         }
         private void Picture_Strizhka_Click(object sender, EventArgs e)
         {
-            DataBank.TextInfo = Info[1];
             DataBank.TypeInfo = (Classes.Type)1;
             Zapis zapis = new Zapis();
             zapis.ShowDialog();
@@ -33,7 +32,6 @@ namespace Khalin_Kypcova_612pst.Forms
 
         private void Picture_Ukladka_Click(object sender, EventArgs e)
         {
-            DataBank.TextInfo = Info[0];
             DataBank.TypeInfo = (Classes.Type)0;
             Zapis zapis = new Zapis();
             zapis.ShowDialog();
@@ -41,7 +39,6 @@ namespace Khalin_Kypcova_612pst.Forms
 
         private void Picture_Brovi_Click(object sender, EventArgs e)
         {
-            DataBank.TextInfo = Info[5];
             DataBank.TypeInfo = (Classes.Type)5;
             Zapis zapis = new Zapis();
             zapis.ShowDialog();
@@ -49,7 +46,6 @@ namespace Khalin_Kypcova_612pst.Forms
 
         private void Picture_Nigti_Click(object sender, EventArgs e)
         {
-            DataBank.TextInfo = Info[2];
             DataBank.TypeInfo = (Classes.Type)2;
             Zapis zapis = new Zapis();
             zapis.ShowDialog();
@@ -57,7 +53,6 @@ namespace Khalin_Kypcova_612pst.Forms
 
         private void Picture_Farbuvanya_Click(object sender, EventArgs e)
         {
-            DataBank.TextInfo = Info[3];
             DataBank.TypeInfo = (Classes.Type)3;
             Zapis zapis = new Zapis();
             zapis.ShowDialog();
@@ -65,7 +60,6 @@ namespace Khalin_Kypcova_612pst.Forms
 
         private void Picture_Vii_Click(object sender, EventArgs e)
         {
-            DataBank.TextInfo = Info[4];
             DataBank.TypeInfo = (Classes.Type)4;
             Zapis zapis = new Zapis();
             zapis.ShowDialog();
@@ -73,7 +67,6 @@ namespace Khalin_Kypcova_612pst.Forms
 
         private void Picture_Kosmet_Click(object sender, EventArgs e)
         {
-            DataBank.TextInfo = Info[6];
             DataBank.TypeInfo = (Classes.Type)6;
             Zapis zapis = new Zapis();
             zapis.ShowDialog();

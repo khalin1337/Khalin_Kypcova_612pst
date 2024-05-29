@@ -17,12 +17,13 @@ namespace Khalin_Kypcova_612pst.Forms
         public Profile()
         {
             InitializeComponent();
-            IUser user = DataBank.CurentUser;
+            Serializacion.DeserializationFromJson(ref users, "Users.json");
+            IUser user = users.FirstOrDefault(x=> x.Id == DataBank.CurentUser.Id);
             Profile_email.Text = user.Email;
             Profile_Name.Text = user.Name;
             Profile_pasword.Text = user.Password;
             Profile_phone.Text = user.Phone;
-            Serializacion.DeserializationFromJson(ref users, "Users.json");
+            
         }
 
         private void Profile_button_Click(object sender, EventArgs e)
