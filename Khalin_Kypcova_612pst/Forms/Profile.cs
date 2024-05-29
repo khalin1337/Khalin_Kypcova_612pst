@@ -41,6 +41,7 @@ namespace Khalin_Kypcova_612pst.Forms
                             users[indextoupdate].Email = Profile_email.Text;
                             users[indextoupdate].Password = Profile_pasword.Text;
                             users[indextoupdate].Phone = Profile_phone.Text;
+                            Serializacion.SerialiazeToJson(ref users, "Users.json");
                         }
                         else
                         {
@@ -69,7 +70,7 @@ namespace Khalin_Kypcova_612pst.Forms
 
         private void Profile_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Serializacion.SerialiazeToJson(ref users, "User.json");
+           // Serializacion.SerialiazeToJson(ref users, "User.json");
         }
     }
    
